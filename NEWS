@@ -1,0 +1,9 @@
+nuExprEval NEWS -- history of user-visible changes.
+http://www.eantcal.eu/
+Author - Antonino Calderone - antonino.calderone@gmail.com - (c) 2017
+
+Please send nuExprEval bug reports to <antonino.calderone@gmail.com>.
+
+Win32/64 built with VS2017 needs "Visual C++ Redistributable Packages for Visual Studio 2017"
+
+
