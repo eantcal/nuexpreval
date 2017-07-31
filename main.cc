@@ -18,7 +18,7 @@
 
 int main(int argc, char* argv[])
 {
-    if (argc<1) {
+    if (argc<2) {
         std::cerr << argv[0] << "mathexpr" << std::endl;
         return 1;
     }
