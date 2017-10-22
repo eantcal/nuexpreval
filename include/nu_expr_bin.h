@@ -43,13 +43,12 @@ public:
     expr_bin_t& operator=(const expr_bin_t&) = default;
 
     //! Returns f(var1, var2) appling ctor given arguments
-    virtual variant_t eval(ctx_t& ctx) const
-    {
+    variant_t eval(ctx_t& ctx) const override {
         return _func(_var1->eval(ctx), _var2->eval(ctx));
     }
 
     //! Returns false for a binary expression
-    virtual bool empty() const noexcept override { 
+    bool empty() const noexcept override { 
         return false; 
     }
 
