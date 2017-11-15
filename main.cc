@@ -19,7 +19,8 @@
 int main(int argc, char* argv[])
 {
     if (argc<2) {
-        std::cerr << argv[0] << "mathexpr" << std::endl;
+        std::cerr << "Usage:"<< argv[0] << " mathexpr" << std::endl;
+        std::cerr << "Example:"<< argv[0] << " \"sin(3.141516/2)^2*2-3\"" << std::endl;
         return 1;
     }
 
@@ -31,11 +32,11 @@ int main(int argc, char* argv[])
     std::string s_expr = ss.str();
 
     nu::tokenizer_t st(s_expr);
-    nu::expr_compiler_t ep;
-
-    auto expr = ep.compile(st);
-
     try {
+        nu::expr_compiler_t ep;
+
+        auto expr = ep.compile(st);
+
         nu::ctx_t ctx;
         auto result = expr->eval(ctx);
         std::cout << result.to_str() << std::endl;
